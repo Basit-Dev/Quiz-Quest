@@ -41,7 +41,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZ1-rb-99j" userLabel="Question View">
                                         <rect key="frame" x="0.0" y="80.5" width="414" height="609.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1n-zh-r2Z" userLabel="Question Label" customClass="RoundedCornerView" customModule="Quiz_Quest" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1n-zh-r2Z" userLabel="Question Label">
                                                 <rect key="frame" x="10" y="0.0" width="394" height="609.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -97,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="B1n-zh-r2Z" id="lzi-tO-bea"/>
+                        <outlet property="scoreLabel" destination="gCG-Aq-TKu" id="UHs-j9-xBl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
