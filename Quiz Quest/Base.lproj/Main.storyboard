@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,42 +28,64 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Question Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOa-5A-M9X" userLabel="Question Label">
-                                        <rect key="frame" x="0.0" y="40" width="374" height="568"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgh-c6-IWj">
-                                        <rect key="frame" x="0.0" y="628" width="374" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTA-ln-a3D">
+                                        <rect key="frame" x="0.0" y="40" width="374" height="708"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Question Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOa-5A-M9X" userLabel="Question Label">
+                                                <rect key="frame" x="10" y="10" width="354" height="568"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkG-Fk-er9">
+                                                <rect key="frame" x="10" y="648" width="354" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="03m-rT-l3x"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="False">
+                                                    <color key="baseBackgroundColor" red="0.94901960780000005" green="0.3921568627" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgh-c6-IWj">
+                                                <rect key="frame" x="10" y="588" width="354" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="hw2-SP-rXl"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="True">
+                                                    <color key="baseBackgroundColor" red="0.94901960784313721" green="0.39215686274509803" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="hw2-SP-rXl"/>
+                                            <constraint firstItem="dkG-Fk-er9" firstAttribute="leading" secondItem="RTA-ln-a3D" secondAttribute="leading" constant="10" id="3eO-5M-Yx1"/>
+                                            <constraint firstAttribute="height" constant="570" id="Et0-Eb-P1f"/>
+                                            <constraint firstAttribute="trailing" secondItem="qgh-c6-IWj" secondAttribute="trailing" constant="10" id="I7X-LZ-tuQ"/>
+                                            <constraint firstItem="fOa-5A-M9X" firstAttribute="leading" secondItem="RTA-ln-a3D" secondAttribute="leading" constant="10" id="Js6-mK-hGX"/>
+                                            <constraint firstAttribute="trailing" secondItem="dkG-Fk-er9" secondAttribute="trailing" constant="10" id="Lpu-Cl-6HU"/>
+                                            <constraint firstItem="qgh-c6-IWj" firstAttribute="leading" secondItem="RTA-ln-a3D" secondAttribute="leading" constant="10" id="abd-ze-fU3"/>
+                                            <constraint firstItem="dkG-Fk-er9" firstAttribute="top" secondItem="qgh-c6-IWj" secondAttribute="bottom" constant="20" id="bmZ-zU-5eX"/>
+                                            <constraint firstAttribute="bottom" secondItem="dkG-Fk-er9" secondAttribute="bottom" constant="20" id="dKt-OF-r4E"/>
+                                            <constraint firstItem="fOa-5A-M9X" firstAttribute="top" secondItem="RTA-ln-a3D" secondAttribute="top" constant="10" id="kai-r4-occ"/>
+                                            <constraint firstItem="qgh-c6-IWj" firstAttribute="top" secondItem="fOa-5A-M9X" secondAttribute="bottom" constant="10" id="tuj-lZ-hKp"/>
+                                            <constraint firstAttribute="trailing" secondItem="fOa-5A-M9X" secondAttribute="trailing" constant="10" id="vCd-qS-TeO"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="True">
-                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkG-Fk-er9">
-                                        <rect key="frame" x="0.0" y="688" width="374" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="03m-rT-l3x"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="False"/>
-                                    </button>
+                                    </view>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rX7-x5-EIz">
-                                        <rect key="frame" x="0.0" y="748" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="768" width="374" height="10"/>
+                                        <color key="tintColor" red="0.94901960780000005" green="0.3921568627" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="XhW-1v-FHX"/>
+                                            <constraint firstAttribute="height" constant="10" id="XhW-1v-FHX"/>
                                         </constraints>
                                     </progressView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.68115714449999998" green="0.46289020019999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.40638497470000001" green="0.34687244890000002" blue="0.85965460540000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S1X-wc-P5R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="G74-DQ-lvf"/>
                             <constraint firstItem="S1X-wc-P5R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="WWN-Hc-smA"/>
@@ -77,8 +100,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
