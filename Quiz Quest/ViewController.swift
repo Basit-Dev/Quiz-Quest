@@ -8,13 +8,10 @@
 import UIKit
 @IBDesignable
 class ViewController: UIViewController {
-
-
-    
-    
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var mainView: UIView!
     
     var score  = 0
     
@@ -22,9 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        questionLabel.layer.cornerRadius = 40
-//        questionLabel.layer.masksToBounds = true
-//        scoreLabel.text = "Total score: \(score)"
+        mainView.layer.cornerRadius = 20
+        mainView.layer.masksToBounds = true
+        scoreLabel.text = "Total score: \(score)"
     }
 }
 
