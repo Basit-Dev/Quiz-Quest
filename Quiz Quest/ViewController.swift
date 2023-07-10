@@ -34,18 +34,30 @@ class ViewController: UIViewController {
 //        Create default score and question label on initial view load
         scoreLabel.text = "Total score: \(score)"
         questionLabel.text = String(questions[questionNumber][0])
+        progressBar.progress = Float(1) / Float(questions.count)
+        print(questions.count)
     }
     
     func checkArrayLength()  {
         if questionNumber > questions.count - 1  {
             questionNumber = 0
             score = 0
+            progressBar.progress = Float(1) / Float(questions.count)
         }
     }
+    
+    func updateProgressBar() {
+        let progress = Float(1) / Float(questions.count)
+        progressBar.progress += progress
+    }
+    
     func updateUI()  {
         
         //        Update question number
         questionNumber += 1
+        
+        //        Update progress bar
+        updateProgressBar()
         
         //        Check if we have reached the last question
         checkArrayLength()
