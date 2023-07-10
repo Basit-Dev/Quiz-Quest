@@ -53,6 +53,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="True">
                                                     <color key="baseBackgroundColor" red="0.94901960784313721" green="0.39215686274509803" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trueBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ic-Ka-RD5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkG-Fk-er9">
                                                 <rect key="frame" x="20" y="614" width="334" height="40"/>
