@@ -13,6 +13,7 @@
 		6E7FD75B2A5725C400D942AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7FD7592A5725C400D942AE /* Main.storyboard */; };
 		6E7FD75D2A5725C900D942AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7FD75C2A5725C900D942AE /* Assets.xcassets */; };
 		6E7FD7602A5725C900D942AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7FD75E2A5725C900D942AE /* LaunchScreen.storyboard */; };
+		6EB654D92A7AEDDC00E3C4BB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB654D82A7AEDDC00E3C4BB /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6E7FD75C2A5725C900D942AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E7FD75F2A5725C900D942AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E7FD7612A5725C900D942AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EB654D82A7AEDDC00E3C4BB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		6E7FD7522A5725C400D942AE /* Quiz Quest */ = {
 			isa = PBXGroup;
 			children = (
+				6EB654D72A7AED6A00E3C4BB /* Controller */,
+				6EB654D62A7AED6300E3C4BB /* View */,
+				6EB654D52A7AED4300E3C4BB /* Model */,
 				6E7FD7532A5725C400D942AE /* AppDelegate.swift */,
 				6E7FD7552A5725C400D942AE /* SceneDelegate.swift */,
-				6E7FD7572A5725C400D942AE /* ViewController.swift */,
-				6E7FD7592A5725C400D942AE /* Main.storyboard */,
 				6E7FD75C2A5725C900D942AE /* Assets.xcassets */,
 				6E7FD75E2A5725C900D942AE /* LaunchScreen.storyboard */,
 				6E7FD7612A5725C900D942AE /* Info.plist */,
 			);
 			path = "Quiz Quest";
+			sourceTree = "<group>";
+		};
+		6EB654D52A7AED4300E3C4BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6EB654D82A7AEDDC00E3C4BB /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6EB654D62A7AED6300E3C4BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E7FD7592A5725C400D942AE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6EB654D72A7AED6A00E3C4BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E7FD7572A5725C400D942AE /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E7FD7582A5725C400D942AE /* ViewController.swift in Sources */,
+				6EB654D92A7AEDDC00E3C4BB /* Question.swift in Sources */,
 				6E7FD7542A5725C400D942AE /* AppDelegate.swift in Sources */,
 				6E7FD7562A5725C400D942AE /* SceneDelegate.swift in Sources */,
 			);
