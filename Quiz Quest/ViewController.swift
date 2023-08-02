@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     
     var score = 0
     var questionNumber = 0
-    
+    var trackProgress = Float()
+        
     let questions = [
         ["A slug's blood is green.", "True"],
         ["Approximately one quarter of human bones are in the feet.","False"],
-        [ "The total surface area of two human lungs is approximately 70 square metres.", "True"],
+        [ "The total surface area of two human lungs is approximately 70 square metres.", "True"]
     ]
     
     
@@ -34,21 +35,20 @@ class ViewController: UIViewController {
 //        Create default score and question label on initial view load
         scoreLabel.text = "Total score: \(score)"
         questionLabel.text = String(questions[questionNumber][0])
-        progressBar.progress = Float(1) / Float(questions.count)
-        print(questions.count)
+        trackProgress = Float(questionNumber + 1) / Float(questions.count)
+        progressBar.progress = trackProgress
     }
     
-    func checkArrayLength()  {
+    func checkIfLastQuestion()  {
         if questionNumber > questions.count - 1  {
             questionNumber = 0
             score = 0
-            progressBar.progress = Float(1) / Float(questions.count)
         }
     }
     
     func updateProgressBar() {
-        let progress = Float(1) / Float(questions.count)
-        progressBar.progress += progress
+       trackProgress = Float(questionNumber + 1) / Float(questions.count)
+        progressBar.progress = trackProgress
     }
     
     func updateUI()  {
@@ -56,11 +56,11 @@ class ViewController: UIViewController {
         //        Update question number
         questionNumber += 1
         
+        //        Check if we have reached the last question
+        checkIfLastQuestion()
+        
         //        Update progress bar
         updateProgressBar()
-        
-        //        Check if we have reached the last question
-        checkArrayLength()
         
         //        Update questions and score label
         questionLabel.text = String(questions[questionNumber][0])
